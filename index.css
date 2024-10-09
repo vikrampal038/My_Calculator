@@ -51,7 +51,6 @@ button {
   height: 65px;
   margin: 10px;
   border-radius: 30%;
-  border: 3px solid whitesmoke;
   background-color: darkslategrey;
   color: rgb(255, 255, 255);
   font-size: 25px;
@@ -84,52 +83,71 @@ button:hover{
   background-color: rgb(213, 68, 15);
 }
 
-/* Responsive Design */
 
-/* Tablets and smaller desktop screens */
-@media (max-width: 1024px) {
-  #display {
-    width: 300px;
+/* Responsive Styles for Tablets */
+@media screen and (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 20px;
-    font-size: 35px;
+    height: auto; /* Adjust the height for smaller devices */
+  }
+
+  #calculator {
+    width: 100%; /* Make the calculator fit most of the screen */
+    padding: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 40px 70px -20px, rgba(0, 0, 0, 0.3) 0px 20px 50px -20px, rgba(10, 37, 64, 0.35) 0px -1px 5px 0px inset;
+
+  }
+
+  #display {
+    font-size: 60px;
+    padding: 25px;
+    width: 96%; /* Make the display responsive */
   }
 
   button {
-    width: 55px;
-    height: 55px;
-    margin: 8px;
-    font-size: 18px;
+    width: 146px;
+    height: 146px;
+    font-size: 50px;
+    margin: 7px;
+  }
+
+  .container {
+    margin-left: 0; /* Adjust margin for better centering */
   }
 }
 
-/* Mobile devices */
-@media (max-width: 768px) {
+/* Responsive Styles for Mobile Devices */
+@media screen and (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+    }
+
+  #calculator {
+    width: 100%; /* Make the calculator more compact for mobile screens */
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -15px, rgba(0, 0, 0, 0.3) 0px 15px 40px -20px, rgba(10, 37, 64, 0.35) 0px -1px 4px 0px inset;
+    margin: 18px;
+  }
+
   #display {
-    width: 250px;
-    padding: 18px;
     font-size: 30px;
+    padding: 8px;
+    width: 94%; /* Stretch the display to fit mobile screen */
   }
 
   button {
     width: 50px;
     height: 50px;
-    margin: 6px;
-    font-size: 16px;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-  #display {
-    width: 200px;
-    padding: 16px;
-    font-size: 25px;
+    font-size: 18px;
+    margin: 9px;
   }
 
-  button {
-    width: 45px;
-    height: 45px;
-    margin: 4px;
-    font-size: 14px;
+  .container {
+    margin-left: 0;
   }
 }
